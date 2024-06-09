@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:fragment="email_head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .content {
+            padding: 0 30px 20px;
+            margin: 0 auto;
+            width: 670px;
+        }
+
+        #header {
+            text-align: left;
+            padding: 0 0 5px;
+        }
+
+        #footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #f3f4f6;
+            padding: 20px 40px 20px
+        }
+
+        #footer-logo {
+            display: block;
+            width: 160px;
+            height: auto;
+            margin: 30px auto 0px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="content" th:fragment="email_head_logo">
+    <div id="header">
+        <a href="https://mail.getyourguide.com/ls/click?upn=ztYmJEKDG9Eca1Hb7CE18CQpvv-2F-2Bza8by6546Ta4zdcAWmlrEY9aApwE44obmcEj2Cow_CaU51rn8mPmTkBZANVgZaMJYDo9EDpwKkv6NG6ELgKXVJPvl9N8-2B-2Bduj5mL0WarmQaoQYFzRXkMYcBksiinh9roh8KQc5HtmzRdmSGO260u0pg8iEd87K3w5Iw6sDTUc8d26D-2FQqpGbcWUsCD-2BBu-2FDudX0vcghGNJayRBYNZKnUEgx-2Bg9kSb-2Bmso8ToK9pmpfoWal8aTf3QDH2H0OLqoszU-2BbwBTAgjlJ8rJApyqOa9WKBQv0qUPWHAS3ydFkV81dyl7p7ekr3VpMUB1mB9ZlExdhPIZ4cr1cEk721Q-2BqbR4Uz9CIiTHor87HcwEppQwccVlzaTFRunpalaq7pqJ7rFZwvZ3A88MrO-2BKhZ6-2ByRc-3D"
+           target="_blank"
+           data-saferedirecturl="https://www.google.com/url?q=https://mail.getyourguide.com/ls/click?upn%3DztYmJEKDG9Eca1Hb7CE18CQpvv-2F-2Bza8by6546Ta4zdcAWmlrEY9aApwE44obmcEj2Cow_CaU51rn8mPmTkBZANVgZaMJYDo9EDpwKkv6NG6ELgKXVJPvl9N8-2B-2Bduj5mL0WarmQaoQYFzRXkMYcBksiinh9roh8KQc5HtmzRdmSGO260u0pg8iEd87K3w5Iw6sDTUc8d26D-2FQqpGbcWUsCD-2BBu-2FDudX0vcghGNJayRBYNZKnUEgx-2Bg9kSb-2Bmso8ToK9pmpfoWal8aTf3QDH2H0OLqoszU-2BbwBTAgjlJ8rJApyqOa9WKBQv0qUPWHAS3ydFkV81dyl7p7ekr3VpMUB1mB9ZlExdhPIZ4cr1cEk721Q-2BqbR4Uz9CIiTHor87HcwEppQwccVlzaTFRunpalaq7pqJ7rFZwvZ3A88MrO-2BKhZ6-2ByRc-3D&amp;source=gmail&amp;ust=1711781433366000&amp;usg=AOvVaw0AkHXeQOttGLUhDglfdnyJ">
+            <img src="https://ci3.googleusercontent.com/meips/ADKq_NZ9dU61wU4WpZKrd1lLpizGaJpuKObB78feCH-Y8LuslBGF25JqJRoCsYzYrMlRUouI0qE37rwXYbDLSV6exaUisfugsTJhO6JkR0sQdeRVumYGnm3B4_XKNrFpjf5qwG2Yeq_cQ-79zNbl2Wxn6ZRLMgdRZ_-Pwd2h72pGOY4S=s0-d-e1-ft#https://cdn.getyourguide.com/assets/bbd83badc212/customer/emails/static/images/gyg-logo-header-stacked.png"
+                 width="70" height="56" alt="GetYourGuide Logo" border="0" class="CToWUd" data-bit="iit">
+        </a>
+    </div>
+</div>
+
+<div class="content" th:fragment="email_footer">
+    <div id="footer">
+        GetYourGuide.com | GetYourGuide Deutschland GmbH, Sonnenburger Strasse 73, 10437 Berlin, Germany. Managing
+        directors: Johannes Reck, Tao Tao, Nils Chrestin. Registered at Amtsgericht Charlottenburg under HRB 132059
+        B
+        VAT ID No. DE276456081. The content of this email may be confidential and intended for the recipient
+        specified
+        in message only. It is strictly forbidden to share any part of this message with any third party. If you
+        received this message by mistake, please reply to this message and follow with its deletion along with its
+        attachment
+        <img id="footer-logo"
+             src="https://ci3.googleusercontent.com/meips/ADKq_NbY3hpgdYS7ylEVfxDXMFljGZlZJLstx8kEZOhZZYMZGiW-KflmgMJrYW8Gum8WtVILFcTmLNb8rjVXJhFc-tYHI-WEzPvZspZ_GOo4FcgknJVWKX6TrZMZMyIJFtK553jYjT_-pbL02i2MlAGtIpMHfNQwkIMq7km5SIBju-zGn5BW=s0-d-e1-ft#https://cdn.getyourguide.com/assets/bbd83badc212/customer/emails/static/images/gyg-logo-footer-horizontal.png"
+             width="160" alt="GetYourGuide Logo" border="0" class="CToWUd" data-bit="iit">
+    </div>
+</div>
+</body>
+
+</html>

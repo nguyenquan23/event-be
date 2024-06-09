@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments :: email_head"></head>
+<body>
+<div th:replace="fragments :: email_head_logo"/>
+<div class="content">
+    <div class="main">
+			<span id="sub-title" style="font-size: 25px;">
+				<p><b>Booking detail detail</b></p>
+			</span>
+        <div class="row row-main justify-content-start">
+            <div class="col">
+                <div class="row d-flex">
+                    <p><b>Tour name: </b> <b th:text="${tourName}"></b></p>
+                </div>
+                <div class="row d-flex">
+                    <p><b>Number of travelers </b><b th:text="${numberOfTravelers}">Number of travelers: </b></p>
+                </div>
+                <div class="row d-flex">
+                    <p><b>Start date: </b><b th:text="${startDate}">Start date: </b></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        </hr>
+        <div class="total">
+            <div class="row justify-content-around">
+                <div class="col-6"><b> Total: $</b> <b th:text="${totalPrice}"> </b></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: email_footer"/>
+</body>
+</html>

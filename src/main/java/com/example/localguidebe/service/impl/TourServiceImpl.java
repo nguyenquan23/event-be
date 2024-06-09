@@ -134,7 +134,7 @@ public class TourServiceImpl implements TourService {
                 newTour
                     .getTourStartTimes()
                     .add(TourStartTime.builder().startTime(getStartTime).tour(newTour).build()));
-    newTour.setStatus(TourStatusEnum.PENDING);
+    newTour.setStatus(TourStatusEnum.ACCEPT);
     if (tourRequestDTO.getLocations().size() != 0) {
       tourRequestDTO
           .getLocations()

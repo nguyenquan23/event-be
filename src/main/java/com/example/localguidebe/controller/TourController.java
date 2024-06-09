@@ -32,7 +32,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/events")
+@RequestMapping("events")
 @CrossOrigin("*")
 public class TourController {
   private TourService tourService;
@@ -97,6 +97,7 @@ public class TourController {
                             ((CustomUserDetails) authentication.getPrincipal()).getEmail()))),
                 HttpStatus.OK);
           } catch (Exception e) {
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(
                 new Result(false, HttpStatus.CONFLICT.value(), "Adding tour failed", null),
                 HttpStatus.CONFLICT);

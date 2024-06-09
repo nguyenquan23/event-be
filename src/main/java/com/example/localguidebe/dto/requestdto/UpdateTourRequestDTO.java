@@ -2,6 +2,8 @@ package com.example.localguidebe.dto.requestdto;
 
 import com.example.localguidebe.entity.Location;
 import com.example.localguidebe.entity.TourStartTime;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -10,7 +12,7 @@ public record UpdateTourRequestDTO(
     String name,
     String description,
     String transportation,
-    String includeService,
+    LocalDateTime includeService,
     Integer duration,
     String unit,
     String estimatedLocalCashNeeded,

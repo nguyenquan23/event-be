@@ -81,6 +81,7 @@ public class TourController {
   @PostMapping("")
   public ResponseEntity<Result> addTour(
       Authentication authentication, @RequestBody TourRequestDTO tourRequestDTO) {
+    tourRequestDTO.setIncludeService(tourRequestDTO.getIncludeService().plusHours(7));
     return AuthUtils.checkAuthentication(
         authentication,
         () -> {

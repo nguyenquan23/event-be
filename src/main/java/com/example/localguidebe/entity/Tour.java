@@ -32,7 +32,7 @@ public class Tour {
   @Column(name = "transportation", columnDefinition = "TEXT")
   private String transportation;
 
-  @Column(name = "include_service", columnDefinition = "TEXT")
+  @Column(name = "include_service")
   private LocalDateTime includeService;
 
   @Column(name = "duration")

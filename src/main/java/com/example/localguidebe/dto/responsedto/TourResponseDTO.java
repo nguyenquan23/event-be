@@ -4,6 +4,7 @@ import com.example.localguidebe.dto.CategoryDTO;
 import com.example.localguidebe.entity.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -18,7 +19,7 @@ public class TourResponseDTO {
     private String name;
     private String description;
     private String transportation;
-    private String includeService;
+    private LocalDateTime includeService;
     private Integer duration;
     private String unit;
     private  String estimatedLocalCashNeeded;

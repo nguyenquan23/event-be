@@ -4,6 +4,8 @@ import com.example.localguidebe.dto.TourDTO;
 import com.example.localguidebe.enums.TourStatusEnum;
 import com.example.localguidebe.utils.JsonUtils;
 import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.*;
@@ -29,8 +31,8 @@ public class TourDupe {
   @Column(name = "transportation", columnDefinition = "TEXT")
   private String transportation;
 
-  @Column(name = "include_service", columnDefinition = "TEXT")
-  private String includeService;
+  @Column(name = "include_service")
+  private LocalDateTime includeService;
 
   @Column(name = "duration")
   private Integer duration;

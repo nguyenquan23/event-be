@@ -3,6 +3,8 @@ package com.example.localguidebe.entity;
 import com.example.localguidebe.enums.TourStatusEnum;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -31,7 +33,7 @@ public class Tour {
   private String transportation;
 
   @Column(name = "include_service", columnDefinition = "TEXT")
-  private String includeService;
+  private LocalDateTime includeService;
 
   @Column(name = "duration")
   private Integer duration;

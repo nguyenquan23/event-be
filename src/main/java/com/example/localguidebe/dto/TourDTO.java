@@ -3,6 +3,8 @@ package com.example.localguidebe.dto;
 import com.example.localguidebe.entity.*;
 import com.example.localguidebe.enums.TourStatusEnum;
 import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -23,7 +25,7 @@ public class TourDTO {
 
   private String transportation;
 
-  private String includeService;
+  private LocalDateTime includeService;
 
   private Integer duration;
 

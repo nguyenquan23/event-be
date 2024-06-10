@@ -122,10 +122,10 @@ public class CartServiceImpl implements CartService {
     Tour tour = tourRepository.findById(bookingDTO.id()).orElseThrow();
     if (tour.getLimitTraveler().compareTo(bookingDTO.numberTravelers()) < 0)
       throw new ExceedLimitTravelerOfTourException("You exceed limit traveler of this tour");
-    if (busyScheduleService
-        .getBusyDateByTour(tour.getId())
-        .contains(bookingDTO.startDate().toLocalDate()))
-      throw new DateBookedException("This date has been booked");
+//    if (busyScheduleService
+//        .getBusyDateByTour(tour.getId())
+//        .contains(bookingDTO.startDate().toLocalDate()))
+//      throw new DateBookedException("This date has been booked");
 
     // save busy schedules
     if (tour.getUnit().equals("day(s)")) {

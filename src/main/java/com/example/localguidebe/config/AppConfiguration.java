@@ -40,6 +40,7 @@ public class AppConfiguration {
     if (activeProfile.equals("prod")) {
       corsConfiguration.addAllowedOriginPattern("*");
       corsConfiguration.setAllowedOrigins(List.of("https://master--event-pbl5-nhom7.netlify.app/"));
+      corsConfiguration.setAllowedOrigins(List.of("https://interns-local-guide.vercel.app/"));
       System.out.println("prod");
     }
     corsConfiguration.addAllowedHeader("*");

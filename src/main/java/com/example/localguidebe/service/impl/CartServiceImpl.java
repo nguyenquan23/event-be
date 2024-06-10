@@ -130,25 +130,25 @@ public class CartServiceImpl implements CartService {
     // save busy schedules
     if (tour.getUnit().equals("day(s)")) {
       while (count < tour.getDuration()) {
-        tour.getGuide()
-            .getBusySchedules()
-            .add(
-                BusySchedule.builder()
-                    .busyDate(bookingDTO.startDate().plusDays(count))
-                    .typeBusyDay(TypeBusyDayEnum.BOOKED_DAY_BY_DAYS)
-                    .guide(tour.getGuide())
-                    .build());
+//        tour.getGuide()
+//            .getBusySchedules()
+//            .add(
+//                BusySchedule.builder()
+//                    .busyDate(bookingDTO.startDate().plusDays(count))
+//                    .typeBusyDay(TypeBusyDayEnum.BOOKED_DAY_BY_DAYS)
+//                    .guide(tour.getGuide())
+//                    .build());
         count++;
       }
     } else {
-      tour.getGuide()
-          .getBusySchedules()
-          .add(
-              BusySchedule.builder()
-                  .busyDate(bookingDTO.startDate())
-                  .typeBusyDay(TypeBusyDayEnum.BOOKED_DAY_BY_HOURS)
-                  .guide(tour.getGuide())
-                  .build());
+//      tour.getGuide()
+//          .getBusySchedules()
+//          .add(
+//              BusySchedule.builder()
+//                  .busyDate(bookingDTO.startDate())
+//                  .typeBusyDay(TypeBusyDayEnum.BOOKED_DAY_BY_HOURS)
+//                  .guide(tour.getGuide())
+//                  .build());
     }
     tourRepository.save(tour);
     // save booking

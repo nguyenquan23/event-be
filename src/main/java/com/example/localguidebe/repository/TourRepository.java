@@ -2,6 +2,8 @@ package com.example.localguidebe.repository;
 
 import com.example.localguidebe.entity.Review;
 import com.example.localguidebe.entity.Tour;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
@@ -46,4 +48,7 @@ public interface TourRepository extends JpaRepository<Tour, Long> {
   @Query(
       "SELECT tour FROM Tour tour WHERE tour.status = 'ACCEPT' AND tour.isForSpecificTraveler = false AND tour.isDeleted = false ")
   Page<Tour> getListTours(Pageable pageable);
+  @Query(
+          "SELECT tour.includeService FROM Tour tour join  tour.bookings b where b.id = :bookingId")
+  LocalDateTime getStartDateByBookingId(@Param("bookingId") Long bookingId);
 }

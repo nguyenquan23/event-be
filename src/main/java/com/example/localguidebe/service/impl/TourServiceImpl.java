@@ -23,6 +23,7 @@ import com.example.localguidebe.utils.CloudinaryUtil;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
@@ -477,5 +478,10 @@ public class TourServiceImpl implements TourService {
   @Override
   public Tour findTourById(Long id) {
     return tourRepository.findById(id).orElse(null);
+  }
+
+  @Override
+  public LocalDateTime getStartDateByBookingId(Long bookingId) {
+    return tourRepository.getStartDateByBookingId(bookingId);
   }
 }

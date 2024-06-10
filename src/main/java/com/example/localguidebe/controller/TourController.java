@@ -524,4 +524,26 @@ public class TourController {
           }
         });
   }
+  @GetMapping("/startDate/{bookingId}")
+  public ResponseEntity<Result> getStartDateByBookingId(Authentication authentication,@PathVariable("bookingId") Long bookingId){
+    return AuthUtils.checkAuthentication(
+            authentication,
+            () -> {
+              try {
+                return new ResponseEntity<>(
+                        new Result(
+                                false,
+                                HttpStatus.OK.value(),
+                                "get list pending successfully",
+                                tourService.getStartDateByBookingId(bookingId)),
+                        HttpStatus.OK);
+              } catch (Exception e) {
+                return new ResponseEntity<>(
+                        new Result(
+                                false, HttpStatus.CONFLICT.value(), "get list pending tour failure", null),
+                        HttpStatus.CONFLICT);
+              }
+            });
+
+  }
 }

@@ -10,6 +10,7 @@ import com.example.localguidebe.dto.responsedto.SearchTourDTO;
 import com.example.localguidebe.entity.Tour;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface TourService {
@@ -58,4 +59,5 @@ public interface TourService {
     List<TourDTO> getPendingTour();
 
     Tour findTourById(Long id);
+    LocalDateTime getStartDateByBookingId(Long bookingId);
 }
